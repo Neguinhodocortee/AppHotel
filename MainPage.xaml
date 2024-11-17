@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.MainPage">
+
+    <!-- Fundo com cores gradientes -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#87CEEB" Offset="0.1" />
+            <GradientStop Color="#FF4500" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Cabeçalho -->
+            <Label Text="Bem-vindo ao App Hotel"
+                   FontSize="32"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontAttributes="Bold" />
+
+            <!-- Imagem (adicione uma imagem chamada 'hotel_logo.png' na pasta Resources) -->
+            <Image Source="hotel_logo.png"
+                   HeightRequest="150"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
+
+            <!-- Texto descritivo -->
+            <Label Text="Escolha suas opções de reserva abaixo"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
+
+            <!-- Botão para acessar a tela Sobre -->
+            <Button Text="Sobre"
+                    BackgroundColor="DarkOrange"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="OnSobreButtonClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
